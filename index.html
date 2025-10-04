@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Alex Smith</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f5f5f5;
+        color: #222;
+        text-align: center;
+      }
+
+      main {
+        padding: 2rem;
+      }
+
+      #mutant_container img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+      }
+
+      #mutant_text {
+        font-size: 1.2rem;
+        margin: 1rem 0;
+      }
+
+      #choice_container button {
+        margin: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 8px;
+        background-color: #007acc;
+        color: white;
+        cursor: pointer;
+      }
+
+      #choice_container button:hover {
+        background-color: #005fa3;
+      }
+
+      #tasks_container ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      #tasks_container li {
+        margin: 0.5rem 0;
+      }
+
+      #tasks_container a {
+        color: #007acc;
+        text-decoration: none;
+      }
+
+      #tasks_container a:hover {
+        text-decoration: underline;
+      }
+
+      #code_container pre {
+        background: #eee;
+        padding: 1rem;
+        border-radius: 8px;
+        max-width: 600px;
+        margin: 1rem auto;
+        text-align: left;
+      }
+
+      #attribution_container {
+        background: #fafafa;
+        padding: 2rem;
+        border-top: 1px solid #ccc;
+      }
+
+      #footer {
+        margin-top: 2rem;
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      #attribution_a {
+        cursor: pointer;
+        color: #007acc;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <h1>Hi, I'm Alex 👋</h1>
+
+      <div id="mutant_container">
+        <img src="/assets/alex.jpg" alt="Alex's profile picture" />
+        <p id="mutant_text">
+          I'm a creative web developer with a passion for building playful, interactive web experiences. Let's build something cool together!
+        </p>
+        <div id="choice_container">
+          <button onclick="window.open('https://yourportfolio.com', '_blank')">🌐 Portfolio</button>
+          <button onclick="window.open('mailto:alex@example.com')">📧 Contact</button>
+        </div>
+      </div>
+
+      <div id="tasks_container">
+        <h2>Projects</h2>
+        <hr />
+        <ul>
+          <li><a href="https://github.com/alex/project-one" target="_blank">🎨 Project One – Creative Coding Art</a></li>
+          <li><a href="https://alex.dev/blog-generator" target="_blank">📝 Blog Generator with AI</a></li>
+          <li><a href="https://alex.dev/weather-app" target="_blank">🌦️ Weather App with JavaScript</a></li>
+        </ul>
+      </div>
+
+      <div id="code_container">
+        <h2>Skills</h2>
+        <pre>
+HTML • CSS • JavaScript
+React • Node.js • Express
+Creative Coding • Web Audio API • Three.js
+        </pre>
+      </div>
+
+      <div id="attribution_container" class="hidden">
+        <h2>About Me</h2>
+        <p>
+          I'm Alex, a developer based in [Your City]. I love blending design and code to make
+          the web more fun and expressive. Currently learning Rust & experimenting with generative art.
+        </p>
+        <p>
+          Follow me on 
+          <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a> or check out my
+          <a href="https://github.com/yourhandle" target="_blank">GitHub</a>.
+        </p>
+        <button onclick="document.getElementById('attribution_container').classList.add('hidden')">Close</button>
+      </div>
+
+      <p id="footer">
+        &copy; 2025 Alex Smith &middot;
+        <a id="attribution_a">About</a>
+      </p>
+    </main>
+
+    <script>
+      // Toggle the About section
+      document.getElementById('attribution_a').addEventListener('click', () => {
+        const about = document.getElementById('attribution_container');
+        about.classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>
